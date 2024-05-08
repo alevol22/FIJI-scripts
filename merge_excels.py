@@ -60,9 +60,7 @@ letter = files[0][0]
 for cur_file in range(len(files)):
     num = files[cur_file][1]
     combo = letter + num
-    if combo == "C2" or combo == 'C2':
-        continue
-    elif letter == files[cur_file][0]:
+    if letter == files[cur_file][0]:
         print(letter + num)
         m, m2 = merge_one_image(input_dir + "\\" + files[cur_file])
         m.insert(0, "SAMPLE", letter + num)
