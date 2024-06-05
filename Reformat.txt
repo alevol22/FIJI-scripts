@@ -1,0 +1,347 @@
+Sub ReformatAlice()
+' My first file in VBA 
+' ReformatSpreadsheet Macro [with previous version of merge_excels.py -> this fixes the wrong group/sample relationship by transposing
+'
+' Keyboard Shortcut: Ctrl+Shift+A
+'
+    Range("B3:AO3").Select
+    Selection.Copy
+    Range("B8").Select
+    Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=True
+    Application.WindowState = xlNormal
+    Range("B18:B27").Select
+    Application.CutCopyMode = False
+    Selection.Cut
+    Range("C8").Select
+    ActiveSheet.Paste
+    Range("B28:B37").Select
+    Selection.Cut
+    Range("D8").Select
+    ActiveSheet.Paste
+    Range("B38:B47").Select
+    Selection.Cut
+    Range("E8").Select
+    ActiveSheet.Paste
+    Range("A9").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("A10").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("A11").Select
+    ActiveCell.FormulaR1C1 = "3"
+    Range("A12").Select
+    ActiveCell.FormulaR1C1 = "4"
+    Range("A13").Select
+    ActiveCell.FormulaR1C1 = "5"
+    Range("A14").Select
+    ActiveCell.FormulaR1C1 = "6"
+    Range("A15").Select
+    ActiveCell.FormulaR1C1 = "7"
+    Range("A16").Select
+    ActiveCell.FormulaR1C1 = "8"
+    Range("B17:E17").Select
+    Selection.ClearContents
+    Range("F8").Select
+    ActiveCell.FormulaR1C1 = "Avg"
+    Range("F9").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=AVERAGE(RC[-4]:RC[-1])"
+    Range("F9").Select
+    Selection.AutoFill Destination:=Range("F9:F16")
+    Range("F9:F16").Select
+    Range("B7:E7").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.Merge
+    ActiveCell.FormulaR1C1 = "Replicates"
+    Range("A7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "MEAN"
+    Range("A18").Select
+    ActiveCell.FormulaR1C1 = "STD"
+    Range("B18:E18").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.Merge
+    ActiveCell.FormulaR1C1 = "Replicates"
+    Range("B4:AO4").Select
+    Selection.Copy
+    Range("B19").Select
+    Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=True
+    Range("B29:B38").Select
+    Application.CutCopyMode = False
+    Selection.Cut
+    Range("C19").Select
+    ActiveSheet.Paste
+    Range("B39:B48").Select
+    Selection.Cut
+    Range("D19").Select
+    ActiveSheet.Paste
+    Range("B49:B58").Select
+    Selection.Cut
+    Range("E19").Select
+    ActiveSheet.Paste
+    Range("F19").Select
+    ActiveCell.FormulaR1C1 = "Avg"
+    Range("F20").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=AVERAGE(RC[-4]:RC[-1])"
+    Range("F20").Select
+    Selection.AutoFill Destination:=Range("F20:F28")
+    Range("F20:F28").Select
+    Range("A20").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("A21").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("A22").Select
+    ActiveCell.FormulaR1C1 = "3"
+    Range("A23").Select
+    ActiveCell.FormulaR1C1 = "4"
+    Range("A24").Select
+    ActiveCell.FormulaR1C1 = "5"
+    Range("A25").Select
+    ActiveCell.FormulaR1C1 = "6"
+    Range("A26").Select
+    ActiveCell.FormulaR1C1 = "7"
+    Range("A27").Select
+    ActiveCell.FormulaR1C1 = "8"
+    Range("B28:F28").Select
+    Selection.ClearContents
+    Range("A18").Select
+    Selection.Font.Bold = True
+    Range("B2:AO2").Select
+    Selection.Copy
+    Range("A29").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "COUNT"
+    Range("B29:E29").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.Merge
+    ActiveCell.FormulaR1C1 = "Replicates"
+    Range("B2:AO2").Select
+    Selection.Copy
+    ActiveWindow.SmallScroll ToRight:=-18
+    ActiveWindow.SmallScroll Down:=14
+    Range("B30").Select
+    Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=True
+    ActiveWindow.SmallScroll Down:=1
+    Range("B40:B49").Select
+    Application.CutCopyMode = False
+    Selection.Cut
+    ActiveWindow.SmallScroll Down:=-5
+    Range("C32").Select
+    Range("C32").Select
+    ActiveWindow.SmallScroll Down:=2
+    Range("C30").Select
+    ActiveSheet.Paste
+    Range("B50:B59").Select
+    Selection.Cut
+    Range("D30").Select
+    ActiveSheet.Paste
+    Range("B60:B69").Select
+    Selection.Cut
+    Range("E30").Select
+    ActiveSheet.Paste
+    Range("A31").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("A32").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("A33").Select
+    ActiveCell.FormulaR1C1 = "3"
+    Range("A34").Select
+    ActiveCell.FormulaR1C1 = "4"
+    Range("A35").Select
+    ActiveCell.FormulaR1C1 = "5"
+    Range("A36").Select
+    ActiveCell.FormulaR1C1 = "6"
+    Range("A37").Select
+    ActiveCell.FormulaR1C1 = "7"
+    Range("A38").Select
+    ActiveCell.FormulaR1C1 = "8"
+    Range("B39:E39").Select
+    Selection.ClearContents
+    Range("F30").Select
+    ActiveCell.FormulaR1C1 = "Avg"
+    Range("F31").Select
+    ActiveCell.FormulaR1C1 = "=AVERAGE(RC[-4]:RC[-1])"
+    Range("F31").Select
+    Selection.AutoFill Destination:=Range("F31:F38")
+    Range("F31:F38").Select
+    Range("A29").Select
+    Selection.Font.Bold = True
+    Range("F9:F16").Select
+    ActiveSheet.Shapes.AddChart2(201, xlColumnClustered).Select
+    ActiveChart.SetSourceData Source:=Range("'SA (pixels^2)'!$F$9:$F$16")
+    ActiveChart.ChartTitle.Select
+    ActiveChart.ChartTitle.Text = "Mean SA"
+    Selection.Format.TextFrame2.TextRange.Characters.Text = "Mean SA"
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 7).ParagraphFormat
+        .TextDirection = msoTextDirectionLeftToRight
+        .Alignment = msoAlignCenter
+    End With
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 7).Font
+        .BaselineOffset = 0
+        .Bold = msoFalse
+        .NameComplexScript = "+mn-cs"
+        .NameFarEast = "+mn-ea"
+        .Fill.Visible = msoTrue
+        .Fill.ForeColor.RGB = RGB(89, 89, 89)
+        .Fill.Transparency = 0
+        .Fill.Solid
+        .Size = 14
+        .Italic = msoFalse
+        .Kerning = 12
+        .Name = "+mn-lt"
+        .UnderlineStyle = msoNoUnderline
+        .Spacing = 0
+        .Strike = msoNoStrike
+    End With
+    Range("P21").Select
+    ActiveSheet.ChartObjects("Chart 1").Activate
+    ActiveChart.PlotArea.Select
+    ActiveChart.ChartArea.Select
+    ActiveSheet.Shapes("Chart 1").ScaleWidth 0.7283333333, msoFalse, _
+        msoScaleFromTopLeft
+    ActiveSheet.Shapes("Chart 1").ScaleHeight 0.7875, msoFalse, msoScaleFromTopLeft
+    ActiveSheet.Shapes("Chart 1").IncrementLeft -76.8
+    ActiveSheet.Shapes("Chart 1").IncrementTop -10.8
+    Application.CommandBars("Format Object").Visible = False
+    Range("F20:F27").Select
+    ActiveSheet.Shapes.AddChart2(201, xlColumnClustered).Select
+    ActiveChart.SetSourceData Source:=Range("'SA (pixels^2)'!$F$20:$F$27")
+    ActiveChart.ChartTitle.Select
+    ActiveChart.ChartTitle.Text = "Stnd dev of SA"
+    Selection.Format.TextFrame2.TextRange.Characters.Text = "Stnd dev of SA"
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 14).ParagraphFormat
+        .TextDirection = msoTextDirectionLeftToRight
+        .Alignment = msoAlignCenter
+    End With
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 4).Font
+        .BaselineOffset = 0
+        .Bold = msoFalse
+        .NameComplexScript = "+mn-cs"
+        .NameFarEast = "+mn-ea"
+        .Fill.Visible = msoTrue
+        .Fill.ForeColor.RGB = RGB(89, 89, 89)
+        .Fill.Transparency = 0
+        .Fill.Solid
+        .Size = 14
+        .Italic = msoFalse
+        .Kerning = 12
+        .Name = "+mn-lt"
+        .UnderlineStyle = msoNoUnderline
+        .Spacing = 0
+        .Strike = msoNoStrike
+    End With
+    With Selection.Format.TextFrame2.TextRange.Characters(5, 10).Font
+        .BaselineOffset = 0
+        .Bold = msoFalse
+        .NameComplexScript = "+mn-cs"
+        .NameFarEast = "+mn-ea"
+        .Fill.Visible = msoTrue
+        .Fill.ForeColor.RGB = RGB(89, 89, 89)
+        .Fill.Transparency = 0
+        .Fill.Solid
+        .Size = 14
+        .Italic = msoFalse
+        .Kerning = 12
+        .Name = "+mn-lt"
+        .UnderlineStyle = msoNoUnderline
+        .Spacing = 0
+        .Strike = msoNoStrike
+    End With
+    ActiveChart.ChartArea.Select
+    ActiveSheet.Shapes("Chart 2").IncrementLeft -77.4
+    ActiveSheet.Shapes("Chart 2").IncrementTop 58.2
+    ActiveSheet.Shapes("Chart 2").ScaleWidth 0.735, msoFalse, msoScaleFromTopLeft
+    ActiveSheet.Shapes("Chart 2").ScaleHeight 0.8291666667, msoFalse, _
+        msoScaleFromTopLeft
+    Range("F31:F38").Select
+    ActiveSheet.Shapes.AddChart2(201, xlColumnClustered).Select
+    ActiveChart.SetSourceData Source:=Range("'SA (pixels^2)'!$F$31:$F$38")
+    ActiveChart.ChartTitle.Select
+    ActiveChart.ChartTitle.Text = "SA Count"
+    Selection.Format.TextFrame2.TextRange.Characters.Text = "SA Count"
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 8).ParagraphFormat
+        .TextDirection = msoTextDirectionLeftToRight
+        .Alignment = msoAlignCenter
+    End With
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 8).Font
+        .BaselineOffset = 0
+        .Bold = msoFalse
+        .NameComplexScript = "+mn-cs"
+        .NameFarEast = "+mn-ea"
+        .Fill.Visible = msoTrue
+        .Fill.ForeColor.RGB = RGB(89, 89, 89)
+        .Fill.Transparency = 0
+        .Fill.Solid
+        .Size = 14
+        .Italic = msoFalse
+        .Kerning = 12
+        .Name = "+mn-lt"
+        .UnderlineStyle = msoNoUnderline
+        .Spacing = 0
+        .Strike = msoNoStrike
+    End With
+    ActiveChart.ChartArea.Select
+    ActiveSheet.Shapes("Chart 3").IncrementLeft -77.4
+    ActiveSheet.Shapes("Chart 3").IncrementTop 88.8
+    ActiveSheet.Shapes("Chart 3").ScaleHeight 1.0041666667, msoFalse, _
+        msoScaleFromTopLeft
+    ActiveSheet.Shapes("Chart 3").ScaleWidth 0.995, msoFalse, msoScaleFromTopLeft
+    ActiveSheet.Shapes("Chart 3").ScaleHeight 0.9944674965, msoFalse, _
+        msoScaleFromTopLeft
+    ActiveSheet.Shapes("Chart 3").ScaleWidth 0.7370184255, msoFalse, _
+        msoScaleFromTopLeft
+    ActiveSheet.Shapes("Chart 3").ScaleHeight 0.752433936, msoFalse, _
+        msoScaleFromTopLeft
+    Range("O31").Select
+    Application.CommandBars("Format Object").Visible = False
+End Sub
